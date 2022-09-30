@@ -23,20 +23,8 @@ function digitsDisplayer() {
   digitsDisplay.style.setProperty('--grid-cols', 3);
   for (c = 0; c < 9; c++) {
     let cell = document.createElement("button");
-    cell.innerText = (c + 1);
+    cell.innerText = (9-c);
     digitsDisplay.appendChild(cell).className = "grid-item";
   };
 };
 digitsDisplayer()
-
-/* Displayer for the Operator */
-const operatorsDisplay = document.getElementById("operators");
-function operatorsDisplayer() {
-  operatorsDisplay.style.setProperty('--grid-rows',1);
-  for (c = 0; c < 4; c++) {
-    let cell = document.createElement("button");
-    cell.innerText = (c + 1);
-    operatorsDisplay.appendChild(cell).className = "grid-item";
-  };
-};
-operatorsDisplayer()
