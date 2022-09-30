@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+}
+header{
+    margin-top: 10px;
+    text-align:center;
+}
+.calculatorContainer{
+    margin-top: 50px;
+    border: 3px solid;
+}
+.resultDisplay, #digitDisplay, .operatorDisplay{
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+.resultDisplay{
+    display: flex;
+    justify-content: end;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans',sans-serif;
+}
+.inputDisplay{
+    display: flex;
+    border: 3px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.operatorDisplay{
+    display: flex;
+    flex: 1;
+}
+#digitDisplay{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+  
+  #digits {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
+  #operators{
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+  }
+  .grid-item {
+    background-color: lightgrey;
+    padding: 1em;
+    border: 2px solid #ddd;
+    text-align: center;
+    font-family: Times,serif;
+}
+button{
+    cursor: pointer;
+}
